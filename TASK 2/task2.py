@@ -8,7 +8,7 @@ for i in range(1, len(ratings)):
         candies.append(2)
     else:
         candies.append(1)
-
-# print("Candies distribution:", candies)
+print("Ratings= ",ratings)
+print("Candies distribution:", candies)
 print("Total candies:", sum(candies))
 
