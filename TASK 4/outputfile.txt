@@ -22,7 +22,6 @@
 }
 
 3. POST: http://127.0.0.1:8000/api/employee/set-base-salary/
-
 {
   "employee_id": 3,
   "base_salary": 25000
