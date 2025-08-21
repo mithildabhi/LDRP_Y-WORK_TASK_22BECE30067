@@ -1,9 +1,11 @@
 .venv/
 .env/
 .env
+.venv
 __pycache__/
 __pycache__
 migrations/
 company/__pycache__/
 company/migrations/
 db.sqlite3
+.vscode/

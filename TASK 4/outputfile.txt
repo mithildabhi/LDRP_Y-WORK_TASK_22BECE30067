@@ -1,0 +1,123 @@
+1. POST : http://127.0.0.1:8000/api/department/
+
+{
+  "name": "Education"
+}
+{
+    "id": "5e2ea1d2-e7ac-44cf-a20d-8ac98f1ab0ec",
+    "name": "Education"
+}
+
+
+2. POST : http://127.0.0.1:8000/api/employee/
+{
+  "name": "Mithil_D",
+  "department": "f51d19ca-de51-4e12-acd7-cc4175dc1a2f"
+}
+{
+    "id": 3,
+    "name": "Mithil_D",
+    "base_salary": null,
+    "department": "f51d19ca-de51-4e12-acd7-cc4175dc1a2f"
+}
+
+3. POST: http://127.0.0.1:8000/api/employee/set-base-salary/
+
+{
+  "employee_id": 3,
+  "base_salary": 25000
+}
+{ "message": "Base salary updated successfully" }
+
+4. PATCH : http://localhost:8000/api/leave/update/
+
+{
+  "employee_id": 3,
+  "month": "08",
+  "year": "2025",
+  "increment_by": 2
+}
+{
+  "employee_id": 3,
+  "month": "08",
+  "year": "2025",
+  "leaves": 2
+}
+
+5. POST : http://127.0.0.1:8000/api/salary/payable/
+{
+  "employee_id": 3,
+  "month": "08",
+  "year": "2025"
+}
+{
+    "employee_id": 3,
+    "month": "08",
+    "year": "2025",
+    "base_salary": 25000,
+    "leaves": 2,
+    "per_day": 1000.0,
+    "deduction": 2000.0,
+    "payable_salary": 23000.0
+}
+
+6. GET : http://localhost:8000/api/high-earners/month/?month=08&year=2025&department_id=f51d19ca-de51-4e12-acd7-cc4175dc1a2f
+
+
+{
+  "employee_id": 3,
+  "month": "08",
+  "year": "2025"
+}
+{
+    "top_unique_salaries": [
+        25000
+    ],
+    "department_id": "f51d19ca-de51-4e12-acd7-cc4175dc1a2f",
+    "department_name": "Finance 2.0",
+    "month": "08",
+    "year": "2025",
+    "employees": [
+        {
+            "id": 3,
+            "name": "Mithil_D",
+            "department_id": "f51d19ca-de51-4e12-acd7-cc4175dc1a2f",
+            "department_name": "Finance 2.0",
+            "base_salary": 25000,
+            "month": "08",
+            "year": "2025",
+            "leaves": 2,
+            "payable_salary": 23000.0
+        }
+    ]
+}
+
+7. GET : http://localhost:8000/api/high-earners/month/?month=08&year=2025&department_id=f51d19ca-de51-4e12-acd7-cc4175dc1a2f
+
+{
+  "employee_id": 3,
+  "month": "08",
+  "year": "2025"
+}
+{
+    "top_unique_salaries": [
+        25000
+    ],
+    "department_id": "f51d19ca-de51-4e12-acd7-cc4175dc1a2f",
+    "department_name": "Finance 2.0",
+    "month": "08",
+    "year": "2025",
+    "employees": [
+        {
+            "id": 3,
+            "name": "Mithil_D",
+            "department_id": "f51d19ca-de51-4e12-acd7-cc4175dc1a2f",
+            "department_name": "Finance 2.0",
+            "base_salary": 25000,
+            "month": "08",
+            "year": "2025",
+            "leaves": 2,
+            "payable_salary": 23000.0
+        }
+    ]
+}   
