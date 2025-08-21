@@ -12,3 +12,4 @@ print("Ratings= ",ratings)
 print("Candies distribution:", candies)
 print("Total candies:", sum(candies))
 
+
